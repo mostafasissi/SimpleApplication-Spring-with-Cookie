@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <!-- Inclure Bootstrap CSS -->
+  <link rel="stylesheet" href="webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="col-md-6  m-2 p-2">
+    <h1>Connexion</h1>
+    <form th:action="@{/login}" method="POST">
+      <div class="form-group">
+        <label for="username">Votre email : </label>
+        <input type="text" class="form-control" id="username" name="email" th:value="${email}" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Se connecter</button>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
